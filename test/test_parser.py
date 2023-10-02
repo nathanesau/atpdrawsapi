@@ -1,5 +1,5 @@
 import os
-from atpdraws import parser
+from src import parser
 
 def test_parse_draw():
     draw_filename = os.path.join(os.path.dirname(__file__), "resources/sample_draw.html")

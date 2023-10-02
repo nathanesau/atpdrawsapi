@@ -1,7 +1,7 @@
 # atpdrawsapi
 API which provides info on ATP draws
 
-## Developer Instructions
+## Python Instructions
 
 ### Installing Dependencies
 
@@ -43,4 +43,34 @@ To run a particular test you can do:
 
 ```
 pytest test/test_parser.py
+```
+
+## AWS Instructions
+
+Installing CDK:
+
+```
+npm install -g aws-cdk
+```
+
+For initial setup of cdk app, I've run the following command:
+
+```
+cdk init app --language typescript
+```
+
+For initial setup for your account, you'll need to run `cdk bootstrap`:
+
+```
+cdk bootstrap
+```
+
+To deploy the CDK changes:
+
+```
+# confirm no unexpected differences
+cdk diff
+
+# deploys the cloudformation changes
+cdk deploy
 ```
