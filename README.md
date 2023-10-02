@@ -36,11 +36,11 @@ pip install -r requirements.txt
 You can run the unit tests as follows:
 
 ```
-python -m unittest discover test
+pytest
 ```
 
 To run a particular test you can do:
 
 ```
-python -m unittest test.test_parser
+pytest test/test_parser.py
 ```
