@@ -13,6 +13,7 @@ export class DynamoStack extends cdk.Stack {
         name: 'id',
         type: dynamodb.AttributeType.STRING,
       },
+      tableName: 'Matchup',
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST
     });
 
