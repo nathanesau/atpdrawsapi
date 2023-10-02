@@ -41,3 +41,11 @@ def parse_draw(draw_content):
         # TODO: parse matchups after round1
 
     return round1_matchups
+
+def handler(event, _):
+    """
+    lambda function for parsing draw and storing the parsed information in dynamodb
+    """
+    page = requests.get(event["url"])
+    round1_matchups = parse_draw(page.content)
+    return {"round1_matchups": round1_matchups}
