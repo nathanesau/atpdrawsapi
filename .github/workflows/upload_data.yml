@@ -1,6 +1,6 @@
 name: Upload Data to S3
 
-on: [pull_request]
+on: [workflow_dispatch]
 
 jobs:
   upload:
