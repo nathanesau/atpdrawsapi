@@ -3,7 +3,7 @@ name: Upload Data to S3
 on:
   push:
     paths:
-      - draws/2024
+      - "draws/**/**"
 
 jobs:
   upload:
