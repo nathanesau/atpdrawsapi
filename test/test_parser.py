@@ -10,7 +10,7 @@ def test_parse_draw():
     # current this just contains a list of round1 matchups
     assert(len(draw) == 16)
 
-def test_handler():
-    # NOTE: if this test breaks, that means that something changed on the atp website
-    response = parser.handler({'url':'https://www.atptour.com/en/scores/current/beijing/747/draws'}, None)
-    assert(len(response["round1_matchups"]) == 16)
+#def test_handler():
+#    # NOTE: if this test breaks, that means that something changed on the atp website
+#    response = parser.handler({'url':'https://www.atptour.com/en/scores/current/beijing/747/draws'}, None)
+#    assert(len(response["round1_matchups"]) == 16)
