@@ -1,6 +1,9 @@
 name: Upload Data to S3
 
-on: [workflow_dispatch]
+on:
+  push:
+    paths:
+      - draws
 
 jobs:
   upload:
