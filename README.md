@@ -1,5 +1,9 @@
 # atpdrawsapi
-API which provides info on ATP draws
+API which provides info on ATP draws.
+
+## Updating Data
+
+Draw data is which is added to the draws folder is uploaded to S3. Draw data should be downloaded as HTML from the ATP website, for instance [this page](https://www.atptour.com/en/scores/current/hong-kong/336/draws). There is a Lambda which listens for added files in S3 and updates the database with the information from the draws. Draws should generally be added before a tournament starts (i.e. once the draw becomes available) and after the tournament is over. The draws can also be uploaded while the tournament is going on. The database will only be updated if the draw data has changed since the last update.
 
 ## Python Instructions
 
