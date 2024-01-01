@@ -88,14 +88,13 @@ For deploying the Dynamo stack:
 cdk deploy DynamoStack
 ```
 
-For deploying the Lambda stack, run the following command, which will use the code in `src/hello` folder.
+For deploying the Lambda stack:
 
 ```
 cdk deploy LambdaStack
 ```
 
-To trigger the parser lambda, run the following command:
 
-```
-aws lambda invoke --function-name parser-lambda --payload '{"url": "https://www.atptour.com/en/scores/current/beijing/747/draws"}' --region us-east-1 --cli-binary-format raw-in-base64-out response.json
-```
+## References
+
+* Instructions on creating lambda layer: https://alannewcomer.medium.com/how-to-crawl-awss-whats-new-blog-with-a-python-lambda-function-and-slack-ddadbc4e127b
