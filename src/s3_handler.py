@@ -30,5 +30,5 @@ def handler(event, _):
         draw = draw_parser.parse_draw(content)
         dynamo_writer.create_or_update_draw(draw=draw, session=session)
         print("wrote draw to dynamo for event: " + json.dumps(event))
-    return {"tournament_name": draw.tournament.name, "tournament_start_date": draw.tournament.start_date,
-            "tournament_end_date": draw.tournament.end_date}
+    return {"tournament_name": draw.tournament.name, "tournament_start_date": draw.tournament.start_date.isoformat(),
+            "tournament_end_date": draw.tournament.end_date.isoformat()}
