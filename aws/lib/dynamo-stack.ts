@@ -33,6 +33,18 @@ export class DynamoStack extends cdk.Stack {
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST
     });
 
+    entrantTable.addGlobalSecondaryIndex({
+      indexName: 'tournamentIdIndex',
+      partitionKey: {
+        name: 'tournament_id',
+        type: dynamodb.AttributeType.STRING
+      },
+      sortKey: {
+        name: 'order',
+        type: dynamodb.AttributeType.NUMBER
+      }
+    });
+
     const matchupTable = new dynamodb.Table(this, 'Matchup', {
       partitionKey: {
         name: 'id',
